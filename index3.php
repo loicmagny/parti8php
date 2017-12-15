@@ -1,0 +1,23 @@
+<?php
+if (isset($_POST['login']) && isset($_POST['password']))
+    setcookie('login', $_POST['login'] . '  ' . $_POST['password'], time() + 365 * 24 * 3600, '/', null, false, true);
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>exercice 3 partie 8</title>
+        <link rel="stylesheet" href="style3.css">
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet"> 
+    </head>
+    <body>
+        <h1>Exercice 3 partie 8</h1>
+        <form method="post" action="index3.php">
+            <label>Login<input type="text" name="login"/></label>
+            <label>Mot de passe<input type="password" name="password"/></label>
+            <button type="submit">Valider</button>
+        </form>
+        <a href="index.php" title="Accueil">Retour</a>
+        <a href="index4.php">Exercice 4</a>
+    </body>
+</html>
